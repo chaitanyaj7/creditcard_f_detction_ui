@@ -1,6 +1,5 @@
 # Filename: app.py
 import streamlit as st
-import pandas as pd
 import requests
 
 # ----------------- Page Config -----------------
@@ -32,7 +31,8 @@ if st.button("Predict"):
             result = response.json()
 
             if "prediction" in result:
-                score = float(result["prediction"])
+                # Remove any trailing newline or spaces
+                score = float(result["prediction"].strip())
                 if score > 0.5:
                     st.error(f"⚠️ Fraud Detected! (score = {score:.4f})")
                 else:
@@ -50,7 +50,7 @@ st.markdown("""
 Developed by <b>Chaitanya Jamdar</b><br>
 LinkedIn: 
 <a href="https://www.linkedin.com/in/chaitanya-jamdar-13706625b/" target="_blank">
-https://www.linkedin.com/in/chaitanya-jamdar-13706625b/
+Chaitanya Jamdar
 </a><br>
 Email: <a href="mailto:jamdarchaitanya127@gmail.com">jamdarchaitanya127@gmail.com</a>
 </p>
