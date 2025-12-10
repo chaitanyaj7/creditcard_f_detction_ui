@@ -6,8 +6,7 @@ import requests
 st.set_page_config(page_title="Credit Card Fraud Detection", layout="wide")
 
 # Your deployed AWS API Gateway endpoint
-API_URL = "https://zlvf4i1s97.execute-api.eu-north-1.amazonaws.com/prod/predict"
-
+API_URL = "https://0lttomv4of.execute-api.eu-north-1.amazonaws.com/prod/predict"
 # ----------------- Header -----------------
 st.title("Credit Card Fraud Detection System")
 st.write("Enter transaction details below and get real-time prediction from AWS SageMaker.")
@@ -55,3 +54,4 @@ Chaitanya Jamdar
 Email: <a href="mailto:jamdarchaitanya127@gmail.com">jamdarchaitanya127@gmail.com</a>
 </p>
 """, unsafe_allow_html=True)
+
